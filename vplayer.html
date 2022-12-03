@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPlayer by Oli</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var prompt = prompt("Welcome to VPlayer by Oli\r\nWith this tool, you can play any video download link without actually downloading it\r\nLoading times are based on the site that the video is hosted on\r\nPlease enter a download link:");
+        if(prompt !== null && prompt !== ""){
+            var vElem = document.createElement("video");
+            vElem.controls = "true";
+            vElem.autoplay = "true";
+            document.body.appendChild(vElem);
+            var srcElem = document.createElement("source");
+            srcElem.src = prompt;
+            vElem.appendChild(srcElem);
+        }
+    </script>
+</body>
+</html>
